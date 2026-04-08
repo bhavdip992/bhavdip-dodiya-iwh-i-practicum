@@ -1,0 +1,15 @@
+h1 Company List
+
+a(href="/update-cobj") Add to this table
+
+table
+  tr
+    th Author Name
+    th Author Category
+    th Author Description
+
+  each item in data
+    tr
+      td= item.properties.author_name
+      td= item.properties.author_category
+      td= item.properties.author_description
