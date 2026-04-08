@@ -1,58 +1,122 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-body, * {
+body,
+* {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
 }
 
-h1 {
-    margin: 1rem;
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
-.cards {
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 18px;
+    background: #ff7a59;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e56745;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table thead {
+    background: #ff7a59;
+    color: white;
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.table tr {
+    border-bottom: 1px solid #eee;
+}
+
+.table tbody tr:hover {
+    background: #f9fafb;
+}
+
+/* Back link */
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #555;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-link:hover {
+    color: #000;
+}
+
+/* Form Styling */
+.form {
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
-.card {
-    flex-basis: 31%;
-    margin: 1rem 0.4rem;
-    padding: 1rem 0.4rem 2.5rem 0.4rem;
-    border: solid 1px lightgrey;
-    border-radius: 15px;
-    box-shadow: 3px 2px 6px lightgrey;
+.form-group {
+    margin-bottom: 18px;
 }
 
-.card__email {
-    font-size: 1rem;
-}
-
-.form-wrapper {
-    font-size: 18px;
-    max-width: 768px;
-    margin: 2rem auto;
-    padding: 2rem;
-    border: solid 1px lightgrey;
-    border-radius: 15px;
-    box-shadow: 3px 2px 6px lightgrey;
-}
-
-label, input {
-    margin-top: 5px;
+.form-group label {
     display: block;
-    font-size: inherit;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333;
 }
 
-input[type="text"] {
-    padding: .25rem;
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border 0.2s;
 }
 
-input[type="submit"] {
-    background-color: lightgrey;
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff7a59;
+    outline: none;
+}
+
+/* Textarea height */
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Button already exists but enhancing */
+button.btn {
     border: none;
-    padding: .375rem 1rem;
+    cursor: pointer;
     margin-top: 10px;
 }

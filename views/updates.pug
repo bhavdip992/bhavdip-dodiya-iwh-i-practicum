@@ -1,10 +1,26 @@
-h1 Add Company
+doctype html
+html
+  head
+    title Add Company
+    link(rel="stylesheet", href="/css/style.css")
 
-a(href="/") Return to homepage
+  body
+    .container
+      h1.title Add Company
 
-form(method="POST", action="/update-cobj")
-  input(type="text", name="author_name", placeholder="Author Name", required)
-  input(type="text", name="author_category", placeholder="Author Category")
-  input(type="text", name="author_description", placeholder="Author Description")
+      a.back-link(href="/") ← Return to homepage
 
-  button(type="submit") Submit
+      form.form(method="POST", action="/update-cobj")
+        .form-group
+          label Author Name
+          input(type="text", name="author_name", placeholder="Enter author name", required)
+
+        .form-group
+          label Author Category
+          input(type="text", name="author_category", placeholder="Enter category")
+
+        .form-group
+          label Author Description
+          textarea(name="author_description", placeholder="Enter description")
+
+        button.btn(type="submit") Submit

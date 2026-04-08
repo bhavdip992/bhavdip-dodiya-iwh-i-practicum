@@ -1,15 +1,24 @@
-h1 Company List
+doctype html
+html
+  head
+    title Company List
+    link(rel="stylesheet", href="/css/style.css")
 
-a(href="/update-cobj") Add to this table
+  body
+    .container
+      h1.title Company List
 
-table
-  tr
-    th Author Name
-    th Author Category
-    th Author Description
+      a.btn(href="/update-cobj") + Add to this table
 
-  each item in data
-    tr
-      td= item.properties.author_name
-      td= item.properties.author_category
-      td= item.properties.author_description
+      table.table
+        thead
+          tr
+            th Author Name
+            th Author Category
+            th Author Description
+        tbody
+          each item in data
+            tr
+              td= item.properties.author_name
+              td= item.properties.author_category
+              td= item.properties.author_description
